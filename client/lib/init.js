@@ -11,3 +11,9 @@ EthAccounts.init();
 
 //EthBlocksの初期化
 EthBlocks.init();
+
+//Session変数の初期化
+initSessionVars();
+
+//オブザーバの起動
+observeNode();
