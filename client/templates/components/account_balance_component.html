@@ -1,0 +1,29 @@
+<template name="accountBalanceComponent">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h4>Account Balance</h4>
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Balance</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each accounts}}
+          {{> accountBalanceItem}}
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</template>
+
+<template name="accountBalanceItem">
+  <tr>
+    <td>{{name}}</td>
+    <td>{{address}}</td>
+    <td>{{balance}}</td>
+  </tr>
+</template>
