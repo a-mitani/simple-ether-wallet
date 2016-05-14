@@ -2,5 +2,19 @@
   <title>Simple Ether Wallet</title>
 </head>
 <body>
-  <h1> Hello, world!!</h1>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">Simple Ether Wallet</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container-fluid">
+    <div class="row-fluid">
+      <div class="col-md-8 col-md-offset-2">
+        {{> nodeStatusComponent}}
+      </div>
+    </div>
+  </main>
 </body>

@@ -1,0 +1,27 @@
+<template name="nodeStatusComponent">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4>Node Status</h4>
+    </div>
+    <table class="table">
+      <tbody>
+          <tr>
+            <th scope="row">Node</th>
+            <td>{{currentProvider}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Is Mining?</th>
+            <td>{{isMining}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Hashrate</th>
+            <td>{{currentHashrate}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Peer Count</th>
+            <td>{{currentPeerCount}}</td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+</template>
