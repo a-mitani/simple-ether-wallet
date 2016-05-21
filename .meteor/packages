@@ -24,3 +24,4 @@ ethereum:web3
 ethereum:accounts
 ethereum:blocks
 session
+iron:router
