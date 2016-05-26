@@ -1,0 +1,36 @@
+<template name="latestTransactionComponent">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4>Latest Transactions (Limit 5)</h4>
+    </div>
+    <table class="table table-striped" >
+      <tbody>
+        {{#each items}}
+          {{> transactionItem}}
+        {{else}}
+          <tr>
+           <td> No Transactions To Show</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</template>
+
+<template name="transactionItem">
+  <tr>
+    <td>
+      <ul>
+        <li><b>Datetime:</b> {{txDateTime}} </li>
+        <li><b>From:</b> {{from}}</li>
+        <li><b>To:</b> {{to}}</li>
+      </ul>
+    </td>
+    <td>
+      <h4>
+        <b>{{amountInEther}}</b> ETHER
+      </h4>
+      <b>{{confirmationCount}}</b> confirmations
+    </td>
+  </tr>
+</template>

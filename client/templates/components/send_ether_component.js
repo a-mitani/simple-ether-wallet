@@ -83,7 +83,15 @@ Template.sendConfirmModalTemplate.events({
     }, function(error, txHash){ //戻り値としてトランザクションハッシュ値が返る
       console.log("Transaction Hash:", txHash, error);
       if(!error) {
-        alert("Ether Transfer Succeeded");
+        //発行したトランザクション情報をTransactionsコレクションに挿入
+        Transactions.upsert(txHash, {$set: {
+          amount: Session.get("sendEther.fundInfo").amount,
+          from: Session.get("sendEther.fundInfo").fAddr,
+          to: Session.get("sendEther.fundInfo").tAddr,
+          timestamp: getCurrentUnixTime(),
+          transactionHash: txHash,
+          fee: estimatedFeeInWei().toString(10),
+        }});
       } else {
         alert("Ether Transfer Failed");
       }

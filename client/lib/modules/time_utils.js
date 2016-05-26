@@ -10,3 +10,11 @@ unix2datetime = function (unixtime){
   var datetimeString = year + '-' + month + '-' + day + ' ' + hour + ':' + min + ':' + sec ;
   return datetimeString;
 };
+
+//現在のUNIX時刻を取得（単位：秒）
+getCurrentUnixTime = function(){
+  var date = new Date() ;
+  var unixTimeSecond = Math.floor( date.getTime() / 1000 ) ;
+  return unixTimeSecond;
+};
+

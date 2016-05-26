@@ -15,5 +15,8 @@ EthBlocks.init();
 //Session変数の初期化
 initSessionVars();
 
+//Transactionsコレクションの初期化
+Transactions = new Mongo.Collection('transactions', {connection: null});
+
 //オブザーバの起動
 observeNode();
