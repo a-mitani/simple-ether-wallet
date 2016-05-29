@@ -24,9 +24,11 @@ Template.transactionItem.helpers({
     return parseFloat(amountEth).toFixed(3);
   },
 
-  //承認回数の取得（現時点では固定でゼロを返す関数）
+  //承認回数の取得
   confirmationCount: function(){
     var count = 0;
+    if(this.blockNumber) count = EthBlocks.latest.number - this.blockNumber +1;
+    if(count > 50) count = "50+";
     return count;
   }
 });

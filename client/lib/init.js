@@ -20,3 +20,4 @@ Transactions = new Mongo.Collection('transactions', {connection: null});
 
 //オブザーバの起動
 observeNode();
+observeTransactions();
